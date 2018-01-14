@@ -1,0 +1,38 @@
+/* Move down content because we have a fixed navbar that is 3.5rem tall */
+body {
+  padding-top: 3.5rem;
+  color:white;
+}
+.jumbotron{
+	
+	background-repeat: no-repeat;
+	background-size: cover;
+    background-position: center;
+    height: 500px
+}
+.jumbContainer{
+	text-align: center;
+	font-weight: 500;
+	font-family: Helvetica;
+}
+.nav-link{
+	 color: #626b7f !important;
+
+}
+.nav-item{
+	margin-left:20px !important;
+}
+.nav-link:hover{
+	 color: #2ec866 !important;
+}
+.navbar-brand{
+	 color: #626b7f !important;
+}
+.login{
+	 color: #2ec866 ;
+	 border:2px solid #2ec866 ;
+	 background-color: white;
+}
+.content{
+	color:black;
+}
