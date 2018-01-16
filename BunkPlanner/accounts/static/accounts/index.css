@@ -33,6 +33,10 @@ body {
 	 border:2px solid #2ec866 ;
 	 background-color: white;
 }
+.login a:hover{
+  color: white !important; 
+  text-decoration: none;
+}
 .signup a{
   color:white;
 }
