@@ -1,3 +1,18 @@
+<!--
+<form method="post" action="{% url 'accounts:signup' %}">
+{% csrf_token %}
+
+{{ form.as_p }}
+<button type="submit">Submit</button>
+
+</form> -->
+
+
+
+
+
+
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -9,13 +24,11 @@
 
     <title>Jumbotron Template for Bootstrap</title>
 
-    <!-- Bootstrap core CSS -->
+
     {% load staticfiles %}
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <!-- Custom styles for this template -->
     <link href="{% static 'accounts/signupform.css' %}" rel="stylesheet">
   </head>
 
@@ -44,27 +57,34 @@
                         <div class="inner-addon left-addon">
                             <i class="fa fa-user" aria-hidden="true"></i>
                             {{ form.username }}
+                            {{ form.username.errors }}
                         </div>
 
                         <div class="inner-addon left-addon">
                             <i class="fa fa-user-o" aria-hidden="true"></i>
                             {{ form.first_name }}
+                            {{ form.first_name.errors }}
                         </div>
                         <div class="inner-addon left-addon">
                             <i class="fa fa-user-o" aria-hidden="true"></i>
                             {{ form.last_name }}
+                            {{ form.last_name.errors }}
+
                         </div>
                         <div class="inner-addon left-addon">
                             <i class="fa fa-envelope" aria-hidden="true"></i>
                             {{ form.email }}
+                            {{ form.email.errors }}
                         </div>
                         <div class="inner-addon left-addon">
                             <i class="fa fa-key" aria-hidden="true"></i>
-                            {{ form.password1 }}
+                            {{ form.password }}
+                            {{ form.password.errors }}
                         </div>
                         <div class="inner-addon left-addon">
                             <i class="fa fa-key" aria-hidden="true"></i>
                             {{ form.password2 }}
+                            {{ form.password2.errors }}
                         </div>
                         <div class="signup_btn">
                         <button type="submit" class="btn btn-danger btn-block">Signup</button>
@@ -87,7 +107,6 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
   </body>
 </html>
-
 
 
 

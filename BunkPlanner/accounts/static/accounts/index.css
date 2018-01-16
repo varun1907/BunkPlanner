@@ -4,7 +4,7 @@ body {
   color:white;
 }
 .jumbotron{
-	
+
 	background-repeat: no-repeat;
 	background-size: cover;
     background-position: center;
@@ -32,6 +32,12 @@ body {
 	 color: #2ec866 ;
 	 border:2px solid #2ec866 ;
 	 background-color: white;
+}
+.signup a{
+  color:white;
+}
+.signup a:hover{
+  text-decoration: none;
 }
 .content{
 	color:black;

@@ -5,13 +5,18 @@ def index(request):
     return render(request,'accounts/index.html')
 
 def signup(request):
+
     if request.method=="POST":
         form=SignUpForm(request.POST)
         if form.is_valid():
             form.save()
             return redirect('accounts:index')
-
+        else:
+            return render(request,'accounts/signupform.html',{'form':form})
     else:
         form=SignUpForm()
 
     return render(request,'accounts/signupform.html',{'form':form})
+
+    # form=SignUpForm(request.POST or None)
+    # return render(request,'accounts/signupform.html',{'form':form})
