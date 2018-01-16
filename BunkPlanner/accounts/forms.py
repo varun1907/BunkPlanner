@@ -8,7 +8,7 @@ class SignUpForm(forms.ModelForm):
     username=forms.CharField(widget=forms.TextInput(attrs={'class' : 'form-control','placeholder':'Username'}),required=True)
     first_name=forms.CharField(widget=forms.TextInput(attrs={'class' : 'form-control','placeholder':'First Name'}),required=True,max_length=20)
     last_name=forms.CharField(widget=forms.TextInput(attrs={'class' : 'form-control','placeholder':'Last Name'}),required=True,max_length=20)
-    email=forms.CharField(widget=forms.EmailInput(attrs={'class' : 'form-control','placeholder':'Email'}),unique=True,required=True)
+    email=forms.CharField(widget=forms.EmailInput(attrs={'class' : 'form-control','placeholder':'Email'}),required=True)
     password=forms.CharField(widget=forms.PasswordInput(attrs={'class' : 'form-control','placeholder':'Password'}),required=True)
     password2=forms.CharField(widget=forms.PasswordInput(attrs={'class' : 'form-control','placeholder':'Confirm Password'}),required=True)
 
