@@ -51,6 +51,6 @@ def login(request):
                 messages.error(request,"Username and password not matched")
 
         except auth.ObjectDoesNotExist:
-            print("Invalid user")
+            
 
     return render(request,'accounts/login.html')
